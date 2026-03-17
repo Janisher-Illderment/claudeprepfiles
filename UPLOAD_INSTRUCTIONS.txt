@@ -1,0 +1,222 @@
+================================================================================
+CLAUDEPREPFILES UPLOAD INSTRUCTIONS
+Copy-Paste Ready Commands for GitLab Deployment
+Version: 2.1 (March 2026)
+================================================================================
+
+================================================================================
+SECTION 1: PREREQUISITES CHECK
+================================================================================
+
+Run these commands to verify your environment before starting:
+
+# Check git is installed:
+git --version
+# Expected: git version 2.x.x or higher
+
+# Check you're authenticated with GitLab:
+git ls-remote https://gitlab.com/smorente.syntax/claudeprepfiles.git HEAD
+# If this prompts for credentials or fails, set up SSH key or personal access token first
+
+# Check SSH key (if using SSH):
+ssh -T git@gitlab.com
+# Expected: "Welcome to GitLab, @username!"
+
+# Check personal access token (if using HTTPS):
+# Create one at: https://gitlab.com/-/user_settings/personal_access_tokens
+# Required scopes: read_repository, write_repository
+
+
+================================================================================
+SECTION 2: CLONE AND SETUP
+================================================================================
+
+# Clone the repository:
+git clone https://gitlab.com/smorente.syntax/claudeprepfiles.git
+cd claudeprepfiles
+
+# Verify you're on the right branch:
+git branch
+# Expected: * main
+
+# Check current state of repo:
+git log --oneline | head -5
+git status
+
+
+================================================================================
+SECTION 3: THE UPLOAD — EXACT COMMANDS
+================================================================================
+
+# From your claudeprepfiles directory with all files in place:
+
+# Step 1: Stage all files
+git add .
+
+# Step 2: Verify what's being committed
+git status
+# Should show: all 17 files listed as "new file" or "modified"
+
+# Step 3: Commit with the official March 2026 commit message
+git commit -m "feat: Add comprehensive ClaudePrepFiles v2.1 — March 2026 Edition
+
+Core Configuration:
+- Add global_CLAUDE_ENHANCED.md v2.1 (12 sections, 14 power patterns)
+  * Section 9: Model Selection Strategy (Opus now default for Max/Team)
+  * Section 10: Pro Resource Management (1M tokens, /effort, /loop, voice)
+  * Section 11: 14 Claude Code Power Patterns
+  * Section 12: Session Start Checklist
+  * Appendix: Common Misconceptions (March 2026)
+- Add project_CLAUDE_ENHANCED_TEMPLATE.md v2.1 (12 sections)
+  * Section 11: Model Routing Hints (NEW)
+  * Section 12: Monthly Review Checklist (NEW)
+
+Documentation (10 files):
+- Add README.md: Complete project overview, features, FAQ, file inventory
+- Add QUICK_START.md: 5-minute install guide with verification test
+- Add INSTALLATION.md: Individual/team/CI-CD/Docker setup
+- Add MARCH_2026_UPDATE_SUMMARY.md: Fact-checked feature updates [HIGH/MED/LOW]
+- Add TRANSITION_GUIDE.md: v1.0 to v2.1 migration guide
+- Add CONTRIBUTING.md: Contributor guidelines and standards
+- Add UPLOAD_GUIDE.md: Team deployment patterns
+- Add INDEX.md: Complete file reference and reading recommendations
+- Add 00_START_HERE.md: New user orientation
+- Add UPLOAD_INSTRUCTIONS.txt: This file
+
+AI Agent Self-Governance (3 files):
+- Add claude_code_AGENT_PROTOCOL.md: AI Agent operating protocol
+- Add claude_code_AGENT_PATTERNS.md: 14 internal reasoning patterns
+- Add claude_code_AGENT_SELF_IMPROVEMENT.md: Performance monitoring framework
+
+Legal and Git:
+- Add LICENSE (MIT)
+- Add .gitignore (standard patterns)
+
+March 2026 Features Documented:
+* Opus 4.6 as default model for Max/Team plans
+* 1M token context windows (Opus + Sonnet)
+* /effort low|medium|high|max adaptive thinking
+* /loop recurring task scheduling
+* Voice mode (push-to-talk, ~5% rollout)
+* Fast mode for Opus (2.5x speedup)
+* Code review automation (Teams/Enterprise)
+* Automatic compaction at context limits
+
+All files: production-ready, fact-checked, confidence-marked"
+
+# Step 4: Push to remote
+git push origin main
+
+# Step 5: Verify push succeeded
+git log --oneline | head -3
+# Should show your new commit at the top
+
+
+================================================================================
+SECTION 4: VERIFICATION COMMANDS
+================================================================================
+
+# Check commit is in remote:
+git log --oneline origin/main | head -5
+
+# List all files that were committed:
+git show --name-only HEAD | head -30
+
+# Check specific file was uploaded correctly:
+git show HEAD:README.md | head -10
+
+# Go to GitLab web interface to verify:
+# https://gitlab.com/smorente.syntax/claudeprepfiles
+# Verify:
+#   - All 17 files appear in the file browser
+#   - README.md renders as formatted markdown (not raw text)
+#   - global_CLAUDE_ENHANCED.md is present and correct size
+#   - The 3 AI Agent files are present
+#   - Commit message shows in the commit log
+
+
+================================================================================
+SECTION 5: ROLLBACK INSTRUCTIONS
+================================================================================
+
+If something goes wrong and you need to undo the commit:
+
+# Option 1: Revert (safe — creates a new commit that undoes the changes)
+git revert HEAD
+git push origin main
+
+# Option 2: Reset to previous state (DESTRUCTIVE — rewrites history)
+# WARNING: Only use if the bad commit hasn't been shared with anyone
+git reset --hard HEAD~1
+git push origin main --force-with-lease
+
+# Option 3: Delete specific files and recommit
+git rm filename-to-delete.md
+git commit -m "chore: remove incorrectly uploaded file"
+git push origin main
+
+
+================================================================================
+SECTION 6: ALTERNATIVE — HTTPS INSTEAD OF SSH
+================================================================================
+
+If you don't have SSH keys set up, use HTTPS with a personal access token:
+
+# Step 1: Create a personal access token on GitLab:
+# Go to: https://gitlab.com/-/user_settings/personal_access_tokens
+# Name: "claudeprepfiles-upload"
+# Scopes: read_repository, write_repository
+# Copy the token immediately — you won't see it again
+
+# Step 2: Configure git to use the token:
+git config --global credential.helper store
+
+# Step 3: Clone with HTTPS:
+git clone https://oauth2:YOUR_TOKEN_HERE@gitlab.com/smorente.syntax/claudeprepfiles.git
+cd claudeprepfiles
+
+# OR configure an existing clone:
+git remote set-url origin https://oauth2:YOUR_TOKEN_HERE@gitlab.com/smorente.syntax/claudeprepfiles.git
+
+# Then proceed with the same git add / commit / push commands from Section 3.
+
+# WARNING: Storing tokens in URLs can be a security risk.
+# After upload, consider removing the token from the URL:
+git remote set-url origin https://gitlab.com/smorente.syntax/claudeprepfiles.git
+
+
+================================================================================
+SECTION 7: QUICK REFERENCE — ALL FILES
+================================================================================
+
+Files that should be present after upload (17 total):
+
+DOCUMENTATION (10):
+  README.md
+  QUICK_START.md
+  INSTALLATION.md
+  MARCH_2026_UPDATE_SUMMARY.md
+  TRANSITION_GUIDE.md
+  CONTRIBUTING.md
+  UPLOAD_GUIDE.md
+  INDEX.md
+  00_START_HERE.md
+  UPLOAD_INSTRUCTIONS.txt
+
+CORE CONFIGURATION (2):
+  global_CLAUDE_ENHANCED.md
+  project_CLAUDE_ENHANCED_TEMPLATE.md
+
+AI AGENT FILES (3):
+  claude_code_AGENT_PROTOCOL.md
+  claude_code_AGENT_PATTERNS.md
+  claude_code_AGENT_SELF_IMPROVEMENT.md
+
+LEGAL AND GIT (2):
+  LICENSE
+  .gitignore
+
+================================================================================
+Created: March 2026
+Repository: https://gitlab.com/smorente.syntax/claudeprepfiles
+================================================================================
