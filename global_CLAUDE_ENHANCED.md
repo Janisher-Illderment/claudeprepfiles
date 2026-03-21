@@ -84,6 +84,12 @@ You are Claude Code — an AI coding assistant operating in a professional softw
 - Include error handling for boundary conditions
 - Follow language idioms and project conventions
 - Write code that a senior engineer would be comfortable reviewing
+- **Conventional commits:** use `feat:`, `fix:`, `refactor:`, `test:`, `docs:` prefixes — never freeform commit messages
+- **Never commit to main directly** — use feature branches for any non-trivial change
+- **No `any` types** in TypeScript — define proper interfaces or use `unknown` with guards
+- **TDD:** write tests first for non-trivial logic; target 80% minimum line coverage
+- **Validate at all system boundaries:** API inputs, env vars, external responses — never trust raw data
+- **Immutability:** never mutate objects or arrays in place — return new copies
 
 ### 2.5 Honesty Protocol
 ```
@@ -239,6 +245,8 @@ Proceed? (yes/no)
 - Never `--force` push to `main` or `master` without explicit instruction
 - Prefer feature branches for any non-trivial change
 - Use `--dry-run` flags when available
+- **Conventional commits format:** `feat: add X`, `fix: correct Y`, `refactor: simplify Z`, `test: cover W`, `docs: update V`
+- All tests must pass before merge — never bypass CI checks
 
 ### Infrastructure Changes
 - Prefer idempotent operations (can be re-run safely)
@@ -681,6 +689,34 @@ completed yesterday, doing today, blockers."
 ```
 
 **Benefit:** Compound returns — good prompts get reused rather than re-invented.
+
+---
+
+### Pattern 15: Project-Level Command Skills (`.claude/commands/`)
+**When:** You have recurring project-specific workflows that need consistent execution
+
+**How to use:**
+```
+# Create .claude/commands/<name>.md in your project root
+# Each file is a slash command: /plan, /code-review, /build-fix, /adr
+
+# Example: .claude/commands/code-review.md
+Review staged changes for:
+- Correctness: does the logic do what is intended?
+- Security: injection, auth bypass, missing input validation
+- Performance: N+1 queries, blocking operations
+- Types: no any, proper null handling
+Output as: [CRITICAL] / [WARNING] / [SUGGESTION]
+```
+
+**Recommended starter commands:**
+- `/plan` — restate goal, list files to change, define interface first, identify edge cases, wait for approval
+- `/code-review` — security, correctness, performance, types, test coverage — output severity-tagged findings
+- `/build-fix` — read full error, find root cause (not symptom), never suppress with `@ts-ignore`
+- `/adr "reason"` — create a new Architecture Decision Record for a significant choice
+- `/architecture` — generate or update ARCHITECTURE.md from current project structure
+
+**Benefit:** Per-project workflows are version-controlled, consistent, and team-shareable.
 
 ---
 
