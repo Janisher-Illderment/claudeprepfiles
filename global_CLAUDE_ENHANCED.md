@@ -4,8 +4,34 @@
 
 > **Purpose**: This is your global Claude Code configuration. It applies to ALL projects unless overridden by a project-level CLAUDE.md. Copy this file to `~/.claude/CLAUDE.md` to activate.
 >
-> **Version**: 2.1 (March 2026)
+> **Version**: 2.2 (March 2026)
 > **Maintained**: https://github.com/Janisher-Illderment/claudeprepfiles
+
+---
+
+## SECTION 0: ENVIRONMENT (User-Specific Overrides)
+
+> These settings override defaults for this specific user and machine. Update when the environment changes.
+
+### OS & Permissions
+- **OS:** Windows 11 Home (Spanish locale — system error messages appear in Spanish)
+- **Shell:** Bash via Claude Code (Git Bash / VS Code terminal)
+- **Admin permissions:** LIMITED — do NOT attempt to run elevated commands directly
+  - ❌ `shutdown`, `taskmgr`, UAC-required operations, anything needing "Run as Administrator"
+  - ✅ Instead: provide the command and tell the user to run it manually
+
+### Browser
+- **Default browser:** Opera GX — NOT Chrome, NOT Edge
+- For any browser-related operation (OAuth, auth flows, URL opening), assume Opera GX
+
+### Tool Installation Rule
+- **ALWAYS fetch official docs before running any install command.** Never guess.
+- Known precedent: Manually attempting `npm install -g @anthropic-ai/claude-code` wasted an entire session. The official method was a one-liner from claude.ai/install.
+- Pattern: `WebSearch` for official install docs → show command → confirm with user → execute
+
+### Asset & File Reference Rule
+- **Never fabricate file paths, asset IDs, or real-world data.** If unknown, say `[UNCERTAIN]` and search or ask.
+- Known precedent: WoW addon sound paths were fabricated, causing non-functional code and lost trust.
 
 ---
 
