@@ -7,7 +7,7 @@
 
 ### Step 1 — Clone (1 minute)
 ```bash
-git clone https://gitlab.com/smorente.syntax/claudeprepfiles.git
+git clone https://github.com/Janisher-Illderment/claudeprepfiles.git
 cd claudeprepfiles
 ```
 

@@ -407,4 +407,4 @@ Example:
 ---
 
 *Template v2.1 — March 2026 | ClaudePrepFiles | MIT License*
-*Source: https://gitlab.com/smorente.syntax/claudeprepfiles*
+*Source: https://github.com/Janisher-Illderment/claudeprepfiles*

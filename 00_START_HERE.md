@@ -138,4 +138,4 @@ The **AI Agent files** are optional advanced reading — they apply the same pro
 ---
 
 *ClaudePrepFiles v2.1 — March 2026*
-*Source: https://gitlab.com/smorente.syntax/claudeprepfiles*
+*Source: https://github.com/Janisher-Illderment/claudeprepfiles*

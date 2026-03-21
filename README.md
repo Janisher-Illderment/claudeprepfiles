@@ -19,7 +19,7 @@ It's built around two core files you install once and benefit from forever: a **
 
 **Step 1 — Clone this repo:**
 ```bash
-git clone https://gitlab.com/smorente.syntax/claudeprepfiles.git
+git clone https://github.com/Janisher-Illderment/claudeprepfiles.git
 cd claudeprepfiles
 ```
 
@@ -240,4 +240,4 @@ MIT — see [LICENSE](LICENSE). Free to use, modify, and distribute with attribu
 ---
 
 *ClaudePrepFiles v2.1 — March 2026 | Community-maintained*
-*Repository: https://gitlab.com/smorente.syntax/claudeprepfiles*
+*Repository: https://github.com/Janisher-Illderment/claudeprepfiles*

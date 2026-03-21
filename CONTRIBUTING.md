@@ -71,7 +71,7 @@ The project is English-only currently. If you're interested in translating to an
 # Fork via GitLab web interface, then:
 git clone https://gitlab.com/your-username/claudeprepfiles.git
 cd claudeprepfiles
-git remote add upstream https://gitlab.com/smorente.syntax/claudeprepfiles.git
+git remote add upstream https://github.com/Janisher-Illderment/claudeprepfiles.git
 ```
 
 ### Step 2: Create a Feature Branch
@@ -210,4 +210,4 @@ We do not welcome personal attacks, off-topic discussion, or promotional content
 ---
 
 *ClaudePrepFiles v2.1 — March 2026*
-*Source: https://gitlab.com/smorente.syntax/claudeprepfiles*
+*Source: https://github.com/Janisher-Illderment/claudeprepfiles*

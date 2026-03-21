@@ -187,4 +187,4 @@ Continuous learning and performance optimization framework for Claude. 9 parts c
 ---
 
 *ClaudePrepFiles v2.1 — March 2026*
-*Source: https://gitlab.com/smorente.syntax/claudeprepfiles*
+*Source: https://github.com/Janisher-Illderment/claudeprepfiles*

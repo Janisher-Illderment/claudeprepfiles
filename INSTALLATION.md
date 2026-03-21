@@ -10,7 +10,7 @@ Before installing ClaudePrepFiles, ensure you have:
 - **Claude Code** installed and working (`claude --version`)
 - **Git** installed (`git --version`)
 - **bash or zsh** shell (Linux/macOS) or Git Bash (Windows)
-- Read access to `https://gitlab.com/smorente.syntax/claudeprepfiles`
+- Read access to `https://github.com/Janisher-Illderment/claudeprepfiles`
 
 ---
 
@@ -19,7 +19,7 @@ Before installing ClaudePrepFiles, ensure you have:
 ### Quick Install (5 steps)
 ```bash
 # 1. Clone the repo
-git clone https://gitlab.com/smorente.syntax/claudeprepfiles.git ~/claudeprepfiles
+git clone https://github.com/Janisher-Illderment/claudeprepfiles.git ~/claudeprepfiles
 
 # 2. Create Claude config directory
 mkdir -p ~/.claude
@@ -359,4 +359,4 @@ ls -la CLAUDE.md
 ---
 
 *ClaudePrepFiles v2.1 — March 2026*
-*Source: https://gitlab.com/smorente.syntax/claudeprepfiles*
+*Source: https://github.com/Janisher-Illderment/claudeprepfiles*

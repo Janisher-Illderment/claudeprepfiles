@@ -15,7 +15,7 @@ git --version
 # Expected: git version 2.x.x or higher
 
 # Check you're authenticated with GitLab:
-git ls-remote https://gitlab.com/smorente.syntax/claudeprepfiles.git HEAD
+git ls-remote https://github.com/Janisher-Illderment/claudeprepfiles.git HEAD
 # If this prompts for credentials or fails, set up SSH key or personal access token first
 
 # Check SSH key (if using SSH):
@@ -32,7 +32,7 @@ SECTION 2: CLONE AND SETUP
 ================================================================================
 
 # Clone the repository:
-git clone https://gitlab.com/smorente.syntax/claudeprepfiles.git
+git clone https://github.com/Janisher-Illderment/claudeprepfiles.git
 cd claudeprepfiles
 
 # Verify you're on the right branch:
@@ -126,7 +126,7 @@ git show --name-only HEAD | head -30
 git show HEAD:README.md | head -10
 
 # Go to GitLab web interface to verify:
-# https://gitlab.com/smorente.syntax/claudeprepfiles
+# https://github.com/Janisher-Illderment/claudeprepfiles
 # Verify:
 #   - All 17 files appear in the file browser
 #   - README.md renders as formatted markdown (not raw text)
@@ -172,17 +172,17 @@ If you don't have SSH keys set up, use HTTPS with a personal access token:
 git config --global credential.helper store
 
 # Step 3: Clone with HTTPS:
-git clone https://oauth2:YOUR_TOKEN_HERE@gitlab.com/smorente.syntax/claudeprepfiles.git
+git clone https://github.com/Janisher-Illderment/claudeprepfiles.git
 cd claudeprepfiles
 
 # OR configure an existing clone:
-git remote set-url origin https://oauth2:YOUR_TOKEN_HERE@gitlab.com/smorente.syntax/claudeprepfiles.git
+git remote set-url origin https://github.com/Janisher-Illderment/claudeprepfiles.git
 
 # Then proceed with the same git add / commit / push commands from Section 3.
 
 # WARNING: Storing tokens in URLs can be a security risk.
 # After upload, consider removing the token from the URL:
-git remote set-url origin https://gitlab.com/smorente.syntax/claudeprepfiles.git
+git remote set-url origin https://github.com/Janisher-Illderment/claudeprepfiles.git
 
 
 ================================================================================
@@ -218,5 +218,5 @@ LEGAL AND GIT (2):
 
 ================================================================================
 Created: March 2026
-Repository: https://gitlab.com/smorente.syntax/claudeprepfiles
+Repository: https://github.com/Janisher-Illderment/claudeprepfiles
 ================================================================================

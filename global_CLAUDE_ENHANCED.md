@@ -5,7 +5,7 @@
 > **Purpose**: This is your global Claude Code configuration. It applies to ALL projects unless overridden by a project-level CLAUDE.md. Copy this file to `~/.claude/CLAUDE.md` to activate.
 >
 > **Version**: 2.1 (March 2026)
-> **Maintained**: https://gitlab.com/smorente.syntax/claudeprepfiles
+> **Maintained**: https://github.com/Janisher-Illderment/claudeprepfiles
 
 ---
 
@@ -695,4 +695,56 @@ Run mentally at the start of each session:
 
 ---
 
-*Version 2.1 — March 2026 | ClaudePrepFiles | MIT License*
+---
+
+## SECTION 13: PERSISTENT MEMORY STATE PROTOCOL
+
+### Overview
+A persistent knowledge repository exists at:
+- **Local:** `C:\Users\sergm\OneDrive\Documentos\DEV-Claude\claude-memory-state\`
+- **Remote:** `https://github.com/Janisher-Illderment/claude-memory-state` (private)
+
+This repo stores all learned skills, project context, user preferences, and accumulated experience across sessions. The `MANIFEST.md` file is the entry point — read it first to understand what knowledge is available.
+
+### Automatic Knowledge Capture (Post-Task)
+**After successfully completing any non-trivial task**, perform the following:
+1. **Analyze** what new knowledge or skills were gained during the task
+2. **Check** existing files in `claude-memory-state/` to avoid duplicates
+3. **Create or update** skill/memory files as needed:
+   - New language or framework? → `skills/<name>.md`
+   - New project started? → Update `memory/projects.md`
+   - User preference learned? → Update `memory/feedback.md`
+   - New tool or workflow? → `skills/<name>.md`
+4. **Update** `MANIFEST.md` index if new files were added
+5. **Commit and push** to `origin` with descriptive message
+
+### `/save` Command
+When the user triggers `/save`, immediately:
+1. Reflect on the current session — what was accomplished, what was learned
+2. Synthesize new knowledge into appropriate memory/skill files
+3. Update `MANIFEST.md`
+4. Commit and push to remote
+5. Confirm to the user what was saved
+
+### Session Start
+When the user asks to "load memory state" or similar:
+1. Read `MANIFEST.md` from the claude-memory-state repo
+2. Load relevant memory and skill files based on the current task context
+3. Confirm what knowledge was restored
+
+### File Format
+All files use frontmatter:
+```markdown
+---
+name: Descriptive Name
+category: language|systems|devops|ai|game-modding
+learned: YYYY-MM-DD
+updated: YYYY-MM-DD
+confidence: HIGH|MED|LOW
+source: project-name
+---
+```
+
+---
+
+*Version 2.2 — March 2026 | ClaudePrepFiles + Memory State Protocol | MIT License*
