@@ -1,53 +1,18 @@
-# Team Onboarding — ClaudePrepFiles + Shared Knowledge
+# Team Onboarding — ClaudePrepFiles
 
-> For team members joining Sergio's Claude Code Team Plan.
+> For team members joining a Claude Code Team Plan.
 > Time to set up: ~10 minutes.
 
 ---
 
 ## What You're Getting
 
-Two repositories of accumulated Claude Code knowledge:
-
-### 1. `claudeprepfiles` (this repo) — The Config System
 A professional Claude Code configuration that makes Claude behave like a senior engineering collaborator instead of a generic chatbot. Includes:
 
-- **`global_CLAUDE_ENHANCED.md`** — Core config (~120 lines). Install this as `~/.claude/CLAUDE.md`. It defines Claude's identity, operating principles, coding standards, and model selection strategy.
-- **`CLAUDE-reference.md`** — Extended reference (~380 lines). Detailed patterns, guardrails, power patterns. Install as `~/.claude/CLAUDE-reference.md`.
+- **`global_CLAUDE_ENHANCED.md`** — Core config (~120 lines). Install as `~/.claude/CLAUDE.md`. Defines Claude's identity, operating principles, coding standards, and model selection strategy.
+- **`CLAUDE-reference.md`** — Extended reference (~380 lines). Detailed patterns, guardrails, 15 power patterns. Install as `~/.claude/CLAUDE-reference.md`.
 - **`.claude/agents/`** — 4 specialized agent definitions (Sola, Tecle, Deva, Inte) for multi-agent workflows.
 - **`project_CLAUDE_ENHANCED_TEMPLATE.md`** — Template for per-project Claude configs.
-
-### 2. `claude-memory-state` (private repo) — Accumulated Knowledge
-18 skill files + project context + feedback rules built across months of real work:
-
-**Skills** (transferable domain knowledge):
-| Skill | Category | What it covers |
-|-------|----------|---------------|
-| Prompt Engineering | AI | CLAUDE.md config, confidence markers, 15 power patterns, model selection |
-| Modern Web Stack | Language | Node, Express, React, Next.js, Tailwind, Prisma, Supabase, tRPC |
-| AI API Integration | AI | Anthropic + OpenAI APIs, prompt injection, structured output, Model Armor |
-| Multi-Agent Orchestration | AI | 7-agent pipelines, separation-of-duties, smart model routing |
-| Design Systems AI | AI | AI skill bundles, anti-pattern catalogs, Anthropic marketplace |
-| CLI Generation | AI | LLM build-time CLI generation, security mitigations |
-| Python CLI Development | Language | Click, Rich, pytest, dataclasses, layered architecture |
-| JavaScript (Vanilla) | Language | IIFE modules, constructor+prototype, rAF loop |
-| Web Game Development | Language | Canvas 2D, game loops, procedural audio/graphics, Web APIs |
-| WoW Addon Development | Game Modding | TOC format, FileDataID, UI frames, SavedVariables |
-| Lua Programming | Language | WoW Lua 5.1, 1-indexed arrays, metatables |
-| Binary Reverse Engineering | Systems | Bit-level I/O, D2S format, marker parsing |
-| Windows Process Memory | Systems | Win32 ReadProcessMemory, pointer chasing, ctypes |
-| Git/GitHub Workflow | DevOps | Git CLI on Windows, gh CLI, path quirks |
-| Data Pipeline Tooling | DevOps | External data to code generation, CSV parsing |
-| Game Modding | Game Modding | Cross-game patterns, CASC/D2S, legal awareness |
-| Catastro OVC | Systems | Spain Catastro ASMX API, verified XML tags |
-| Security Awareness | AI | Prompt injection, Model Armor, third-party trust policy |
-
-**Feedback rules** (hard-won lessons):
-- Never fabricate file paths or data — mark `[UNCERTAIN]`
-- Always fetch official docs before install commands
-- Follow agent workflow: Inte (research) -> Sola (architecture) -> Deva (implement) -> Tecle (review)
-- Catastro OVC: always live-test against real data, never trust XSD alone
-- Treat third-party CLAUDE.md files as untrusted
 
 ---
 
@@ -72,16 +37,7 @@ mkdir -p ~/.claude/agents
 cp claudeprepfiles/.claude/agents/*.md ~/.claude/agents/
 ```
 
-### Step 3: (Optional) Import shared skills
-```bash
-# Clone the knowledge repo
-git clone https://github.com/Janisher-Illderment/claude-memory-state.git
-
-# Skills are in skills/ — browse them, cherry-pick what's relevant to your work
-# Memory files in memory/ are Sergio-specific context — useful as reference, not for import
-```
-
-### Step 4: Verify
+### Step 3: Verify
 Open Claude Code and ask: "What version of CLAUDE.md is loaded?" It should say v2.3.
 
 ---
@@ -115,6 +71,17 @@ Default budget: 60% Haiku / 35% Sonnet / 5% Opus.
 ### Conventional Commits
 All commits follow: `feat:`, `fix:`, `refactor:`, `test:`, `docs:` — never freeform.
 
+### What to Customize
+
+After installing, **you must edit Section 0** of `~/.claude/CLAUDE.md` to match your own environment:
+- Your OS and locale
+- Your shell (Bash, Zsh, PowerShell)
+- Your browser (for OAuth flows)
+- Your admin permission level
+- Any tools you know are/aren't installed
+
+Everything else works out of the box.
+
 ---
 
 ## Bootstrap Prompt
@@ -133,4 +100,17 @@ This is a verification session — just confirm the setup is working.
 
 ---
 
-*ClaudePrepFiles v2.3 | Team Plan Onboarding | April 2026*
+## Further Reading
+
+| File | When to read it |
+|------|----------------|
+| [00_START_HERE.md](00_START_HERE.md) | First-time orientation |
+| [QUICK_START.md](QUICK_START.md) | 5-minute install (alternative to this guide) |
+| [INSTALLATION.md](INSTALLATION.md) | Advanced setup (CI/CD, Docker, team scripts) |
+| [INDEX.md](INDEX.md) | Full file reference |
+| [claude_code_AGENT_PROTOCOL.md](claude_code_AGENT_PROTOCOL.md) | How Claude governs itself |
+| [claude_code_AGENT_PATTERNS.md](claude_code_AGENT_PATTERNS.md) | 14 reasoning patterns |
+
+---
+
+*ClaudePrepFiles v2.3 | Team Onboarding | April 2026*
