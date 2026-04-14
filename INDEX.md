@@ -10,7 +10,7 @@
 | [README.md](README.md) | Doc | ~600 lines | Project overview, features, FAQ | You're new here |
 | [QUICK_START.md](QUICK_START.md) | Guide | ~100 lines | 5-minute install | You want to start now |
 | [INSTALLATION.md](INSTALLATION.md) | Guide | ~400 lines | All setup scenarios | Setting up for a team or CI/CD |
-| [global_CLAUDE_ENHANCED.md](global_CLAUDE_ENHANCED.md) | Config | ~120 lines | The main config — core only (v2.3) | Always — install this first |
+| [global_CLAUDE_ENHANCED.md](global_CLAUDE_ENHANCED.md) | Config | ~120 lines | Main config — core (v2.3) | Always — install this first |
 | [CLAUDE-reference.md](CLAUDE-reference.md) | Reference | ~350 lines | Detailed patterns, guardrails, power patterns | After installing the core config |
 | [project_CLAUDE_ENHANCED_TEMPLATE.md](project_CLAUDE_ENHANCED_TEMPLATE.md) | Template | ~400 lines | Per-project customization | Starting on a new project |
 | [MARCH_2026_UPDATE_SUMMARY.md](MARCH_2026_UPDATE_SUMMARY.md) | Doc | ~300 lines | What's new in March 2026 | Upgrading or learning new features |
@@ -169,7 +169,7 @@ Continuous learning and performance optimization framework for Claude. 9 parts c
 | AI Agent files | 3 |
 | Legal/Git files | 2 |
 | Last major update | March 2026 |
-| Version | 2.1 |
+| Version | 2.3 |
 
 ---
 
@@ -187,5 +187,5 @@ Continuous learning and performance optimization framework for Claude. 9 parts c
 
 ---
 
-*ClaudePrepFiles v2.1 — March 2026*
+*ClaudePrepFiles v2.3 — March 2026*
 *Source: https://github.com/Janisher-Illderment/claudeprepfiles*

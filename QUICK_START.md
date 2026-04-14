@@ -109,4 +109,4 @@ When in doubt: start with Sonnet. If the answer isn't good enough, try Opus.
 
 ---
 
-*ClaudePrepFiles v2.1 — March 2026*
+*ClaudePrepFiles v2.3 — March 2026*

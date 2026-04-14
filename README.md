@@ -239,5 +239,5 @@ MIT — see [LICENSE](LICENSE). Free to use, modify, and distribute with attribu
 
 ---
 
-*ClaudePrepFiles v2.1 — March 2026 | Community-maintained*
+*ClaudePrepFiles v2.3 — March 2026 | Community-maintained*
 *Repository: https://github.com/Janisher-Illderment/claudeprepfiles*
