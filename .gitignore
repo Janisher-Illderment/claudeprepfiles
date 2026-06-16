@@ -34,3 +34,7 @@ build/
 # Personal config overrides (don't commit local customizations)
 CLAUDE.local.md
 *.local.md
+
+# AI tooling runtime state (session-local, not project content)
+.claude/agent-memory/
+.claude/tmp/

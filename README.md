@@ -59,6 +59,17 @@ Before ClaudePrepFiles, Claude Code gives generic responses based on general tra
 
 ---
 
+## Field Learnings
+
+Beyond the configuration system, the [`learnings/`](learnings/README.md) directory is a
+growing, **person-agnostic** knowledge base of field-tested gotchas and best
+practices — the non-obvious things that cost time once and shouldn't again. Each
+entry is shaped as **Learning / Why / How to apply**, grouped by domain (working
+with AI agents, security, Python & data, JS/TS & web, databases, deployment & CI,
+Windows & Git, LaTeX/documents). Start at [learnings/README.md](learnings/README.md).
+
+---
+
 ## Features
 
 ### Core Configuration

@@ -19,6 +19,7 @@
 | [UPLOAD_GUIDE.md](UPLOAD_GUIDE.md) | Guide | ~300 lines | Deploying to your team | Setting up team-wide config |
 | [INDEX.md](INDEX.md) | Reference | ~400 lines | This file | Finding what you need |
 | [00_START_HERE.md](00_START_HERE.md) | Orientation | ~300 lines | First-timer orientation | Completely new to this system |
+| [learnings/](learnings/README.md) | Knowledge base | ~700 lines | Field-tested gotchas & best practices (Learning/Why/How), grouped by domain | You hit a problem and want the known fix |
 | [UPLOAD_INSTRUCTIONS.txt](UPLOAD_INSTRUCTIONS.txt) | Reference | ~400 lines | Copy-paste git commands | Need exact commands quickly |
 | [LICENSE](LICENSE) | Legal | ~20 lines | MIT License | Legal questions |
 | [.gitignore](.gitignore) | Config | ~25 lines | Git ignore patterns | Git setup |
